@@ -20,6 +20,24 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Loot Vault</title>
+    <style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffdd57;
+        color: #333;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .button:hover {
+        transform: scale(1.1);
+      }
+
+      .button:active {
+        transform: scale(0.9);
+      }
+    </style>
   </head>
 
   <body>
@@ -38,7 +56,7 @@
           <button
             type="submit"
             id="search-button"
-            class="is-size-3 p-2 search-button"
+            class="is-size-3 p-2 search-button button"
           >
             Search
           </button>
@@ -50,24 +68,29 @@
           class="is-flex is-justify-content-center is-justify-content-space-between"
         >
           <li>
-            <a id="best-deals" class="is-size-2 page-links">Best Deals</a>
+            <a id="best-deals" class="is-size-2 page-links button"
+              >Best Deals</a
+            >
           </li>
           <li>
-            <a id="highest-rated" class="is-size-2 page-links">Highest Rated</a>
+            <a id="highest-rated" class="is-size-2 page-links button"
+              >Highest Rated</a
+            >
           </li>
-          <li><a id="fg-button" class="is-size-2 page-links">Free Games</a></li>
           <li>
-            <a id="wishlist-button" class="is-size-2 page-links">Wishlist</a>
+            <a id="fg-button" class="is-size-2 page-links button">Free Games</a>
+          </li>
+          <li>
+            <a id="wishlist-button" class="is-size-2 page-links button"
+              >Wishlist</a
+            >
           </li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <!-- container to populate with game results -->
       <div id="games-container"></div>
     </main>
-
     <div class="p-3 is-flex is-justify-content-center has-text-centered">
       <button id="more-button" class="is-size-3 p-3 more-items">
         More Items
